@@ -1,21 +1,34 @@
 import React from "react";
+import ProductCount from "./ProductCount";
 
 type ProductCounterPropsType = {
-  product: {
-    productName: string;
-    count?: number;
-  };
+  productName: string;
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const ProductCounter: React.FC<ProductCounterPropsType> = (props) => {
-  const {
-    product: { productName, count = "Нет информации" },
-  } = props;
+  const { productName, count, setCount } = props;
+
+  const addHandler = () => {
+    setCount((prev) => prev + 1);
+  };
+  const deleteHandler = () => {
+    setCount((prev) => prev - 1);
+  };
+
+  console.log("render ProductCounter", productName);
 
   return (
     <div className="product_counter">
       <h1>{productName}</h1>
-      <span>{count}</span>
+      <ProductCount count={count} />
+      <button onClick={addHandler} type="button">
+        Добавить
+      </button>
+      <button onClick={deleteHandler} type="button">
+        Убавить
+      </button>
     </div>
   );
 };
