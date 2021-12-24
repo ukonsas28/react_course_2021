@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCount from "./ProductCount";
+import style from "./style.module.scss";
 
 type ProductCounterPropsType = {
   productName: string;
@@ -23,10 +24,13 @@ const ProductCounter: React.FC<ProductCounterPropsType> = (props) => {
     <div className="product_counter">
       <h1>{productName}</h1>
       <ProductCount count={count} />
-      <button onClick={addHandler} type="button">
+      <button onClick={addHandler} type="button" className={style.test_style}>
         Добавить
       </button>
-      <button onClick={deleteHandler} type="button">
+      <button
+        onClick={deleteHandler}
+        type="button"
+        className={style.test_style_second}>
         Убавить
       </button>
     </div>
