@@ -66,7 +66,7 @@ const Form: React.FC = () => {
         type="password"
         title="User repeat password"
       />
-      <button onClick={handler} type="button">
+      <button onClick={handler} type="submit">
         PUSH ME
       </button>
       <button onClick={clearForm} type="button">
