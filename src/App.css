@@ -50,19 +50,9 @@ h1 {
   align-items: center;
 }
 
-.header {
-  height: 60px;
-  width: 100%;
-  background-color: aquamarine;
-  text-align: center;
-}
 
-.footer {
-  height: 40px;
-  width: 100%;
-  background-color: rgb(155, 127, 255);
-  text-align: center;
-}
+
+
 .main {
   width: 100%;
   background-color: rgb(131, 255, 127);
