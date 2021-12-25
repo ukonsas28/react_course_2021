@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import RegistrationPage from "./RegistrationPage";
+import RegistrationPage from "./containers/RegistrationPage";
 
 const App = () => {
   return <RegistrationPage />;
