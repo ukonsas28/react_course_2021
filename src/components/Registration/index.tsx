@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import RegistrationForm from "./RegistrationForm";
+import RegistrationForm from "./RegistrationForm";
 
 const Registration = () => {
-  // return <RegistrationForm />;
+  const [state, setState] = useState(false);
+  useEffect(() => {
+    console.log("mount page");
+  }, []);
   return (
-    <div>
-      <Title large>TEST</Title>
-      <SubTitle>SubTitle</SubTitle>
-    </div>
+    <>
+      {state ? <RegistrationForm /> : <Title large>TEST</Title>}
+
+      <button type="button" onClick={() => setState((prev) => !prev)}>
+        CLICK
+      </button>
+    </>
   );
+
+  // return (
+  //   <div>
+  //     <Title large>TEST</Title>
+  //     <SubTitle>SubTitle</SubTitle>
+  //   </div>
+  // );
 };
 
 export default Registration;
@@ -19,6 +32,6 @@ const Title = styled.h1`
   color: red;
 `;
 
-const SubTitle = styled.h2`
-  font-size: 10px;
-`;
+// const SubTitle = styled.h2`
+//   font-size: 10px;
+// `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 type InputPropsType = {
   value: string;
@@ -13,7 +13,9 @@ const Input: React.FC<InputPropsType> = (props) => {
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
-
+  useEffect(() => {
+    console.log("mount input");
+  }, []);
   return (
     <div style={{ fontSize: "24px", display: "flex", flexDirection: "column" }}>
       <span>{title}</span>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "../../common/Input";
 
 const RegistrationForm: React.FC = () => {
@@ -29,6 +29,20 @@ const RegistrationForm: React.FC = () => {
     setPassword("");
     setRepeatPassword("");
   };
+
+  useEffect(() => {
+    console.log("mount form");
+    return () => console.log("unmount");
+  }, []);
+
+  useEffect(() => {
+    console.log("update form");
+  }, [firstName]);
+
+  useEffect(() => {
+    console.log("every render update form");
+  });
+
   return (
     <div>
       <Input
