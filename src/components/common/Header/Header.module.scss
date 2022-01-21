@@ -1,6 +1,22 @@
+@import "../../../assets/style/vars";
 .wrapper-example {
-  height: 60px;
   width: 100%;
-  background-color: aquamarine;
-  text-align: center;
+  height: 80px;
+  background-color: $sub-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.menu_list {
+  width: 400px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  img {
+    width: 50px;
+    height: 50px;
+  }
 }

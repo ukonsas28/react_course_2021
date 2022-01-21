@@ -8,6 +8,7 @@ const MainContent: React.FC<MainContentPropType> = (props) => {
   const handler = () => {
     console.log("click");
   };
+
   useEffect(() => {
     console.log("main content mount");
     document.body.addEventListener("click", handler);
@@ -17,8 +18,9 @@ const MainContent: React.FC<MainContentPropType> = (props) => {
       document.body.removeEventListener("click", handler);
     };
   }, []);
+
   return (
-    <div>
+    <section className="container">
       <h1>MAIN PAGE CONTENT</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -35,7 +37,7 @@ const MainContent: React.FC<MainContentPropType> = (props) => {
         ipsam commodi odio ab ratione quae! Aliquid dolore magni, veniam
         laboriosam quis laudantium. Vero sit eveniet distinctio!
       </p>
-    </div>
+    </section>
   );
 };
 export default MainContent;

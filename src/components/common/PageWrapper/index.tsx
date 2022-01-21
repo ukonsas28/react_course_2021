@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import Header from "../Header";
+import style from "./PageWrapper.module.scss";
 
 type PageWrapperPropTypes = {
   children: React.ReactNode;
@@ -9,9 +10,9 @@ type PageWrapperPropTypes = {
 const PageWrapper: React.FC<PageWrapperPropTypes> = (props) => {
   const { children } = props;
   return (
-    <div className="page_wrapper">
+    <div className={style.page_wrapper}>
       <Header />
-      <main className="main">{children}</main>
+      <main className={style.main}>{children}</main>
       <Footer />
     </div>
   );
