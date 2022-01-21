@@ -1,7 +1,11 @@
 import React from "react";
+import { useLocation, useParams } from "react-router-dom";
 
-const ProductsPage: React.FC = () => {
-  return <h1>PRODUCT LIST</h1>;
+const OneProductPage: React.FC = () => {
+  const { id } = useParams();
+  const location = useLocation();
+  console.log(location);
+  return <h1>ONE PRODUCT {id}</h1>;
 };
 
-export default ProductsPage;
+export default OneProductPage;

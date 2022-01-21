@@ -1,12 +1,14 @@
 import React from "react";
-import PageWrapper from "../../components/common/PageWrapper";
-import Registration from "../../components/Registration";
+import { Link, Outlet } from "react-router-dom";
 
 const RegistrationPage: React.FC = () => {
   return (
-    <PageWrapper>
-      <Registration />
-    </PageWrapper>
+    <div>
+      <Link to="form">FORM</Link>
+      <br />
+      <Link to="info">info</Link>
+      <Outlet />
+    </div>
   );
 };
 
