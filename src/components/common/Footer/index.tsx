@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div>
         <p>Учебная работа ННГУ. Курс React_2021</p>
       </div>
-      <h1>Footer</h1>
+      <h1>FPK_NNGU</h1>
     </footer>
   );
 };

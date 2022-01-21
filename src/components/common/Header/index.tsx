@@ -14,7 +14,9 @@ const Header: React.FC = () => {
           <li>Help</li>
         </ul>
       </nav>
-      <h1>Header</h1>
+      <button type="button" className={style.btn}>
+        <span>SIGN UP</span>
+      </button>
     </header>
   );
 };
