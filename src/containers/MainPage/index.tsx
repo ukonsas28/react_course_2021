@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PageWrapper from "../../components/common/PageWrapper";
 import MainContent from "../../components/MainContent";
 
 const MainPage: React.FC = () => {
@@ -11,7 +10,7 @@ const MainPage: React.FC = () => {
   }, []);
 
   return (
-    <PageWrapper>
+    <>
       {contentVisibility && <MainContent setWasOpen={setWasOpen} />}
       <button
         disabled={!contentVisibility && wasOpen}
@@ -19,7 +18,7 @@ const MainPage: React.FC = () => {
         onClick={() => setContentVisibility((prev) => !prev)}>
         {contentVisibility ? "Скрыть текст" : "Показать текст"}
       </button>
-    </PageWrapper>
+    </>
   );
 };
 
