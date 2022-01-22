@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-concat */
+
 const data = [
   {
     id: 1,
