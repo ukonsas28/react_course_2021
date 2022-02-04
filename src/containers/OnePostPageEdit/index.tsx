@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import OnePost from "../../components/OnePost";
 import { makeRequest } from "../../network";
 import { OnePostType } from "../../store/Posts/types";
+import OnePostEdit from "../../components/OnePostEdit";
 
-const OnePostPage: React.FC = () => {
+const OnePostPageEdit: React.FC = () => {
   const { id } = useParams();
   const [post, setPost] = useState<OnePostType>({} as OnePostType);
 
@@ -18,18 +18,7 @@ const OnePostPage: React.FC = () => {
     fetchData();
   }, [setPost]);
 
-  return <OnePost post={post} />;
+  return <OnePostEdit post={post} />;
 };
 
-export default OnePostPage;
-// useEffect(() => {
-//   const fetchData = async () => {
-//     const data = await makeRequest({
-//       method: "POST",
-//       url: "posts",
-//       data: { title: "foo", body: "bar", userId: 1 },
-//     });
-//     console.log(data);
-//   };
-//   fetchData();
-// }, []);
+export default OnePostPageEdit;
