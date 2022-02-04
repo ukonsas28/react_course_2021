@@ -1,5 +1,3 @@
-import { ReducerType } from "./types";
+import { RootReducerType } from "../types";
 
-export const getPostsData = (state: ReducerType) => state.posts;
-
-export const getUserData = (state: ReducerType) => state.user;
+export const getPostsData = (state: RootReducerType) => state.posts.posts;
