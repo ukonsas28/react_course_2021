@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { OnePostType } from "../../store/Posts/types";
 
 type OnePostPropsType = {
@@ -19,6 +19,10 @@ const OnePost: React.FC<OnePostPropsType> = (props) => {
       <button type="button" onClick={goBack}>
         Назад
       </button>
+      <br />
+      <h2>
+        <Link to="edit">edit</Link>{" "}
+      </h2>
     </div>
   );
 };
