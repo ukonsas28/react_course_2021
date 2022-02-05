@@ -1,6 +1,6 @@
 @import "../../../assets/style/vars";
 .wrapper-example {
-  height: 80px;
+  min-height: 80px;
   width: 100%;
   background-color:$sub-color;
   display: flex;
