@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MainContent from "../../components/MainContent";
 
 const MainPage: React.FC = () => {

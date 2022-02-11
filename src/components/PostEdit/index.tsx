@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import makeRequest from "../../network";
+import React, { useMemo, useState } from "react";
 import { OnePostType } from "../../store/Posts/types";
 import Input from "../common/Input";
 
@@ -17,7 +16,7 @@ const PostEdit: React.FC<PostEditPropsType> = (props) => {
   const [bodyValue, setBodyValue] = useState(body);
 
   return (
-    <div>
+    <div style={{ maxWidth: "400px" }}>
       <Input
         value={titleValue}
         setValue={setTitleValue}
@@ -35,9 +34,9 @@ const PostEdit: React.FC<PostEditPropsType> = (props) => {
 
       <button
         type="button"
-        onClick={() =>
-          submitHandler({ id, userId, title: titleValue, body: bodyValue })
-        }>
+        onClick={() => {
+          submitHandler({ id, userId, title: titleValue, body: bodyValue });
+        }}>
         save
       </button>
     </div>
