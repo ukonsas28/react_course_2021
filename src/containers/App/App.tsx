@@ -7,6 +7,7 @@ import OnePostPage from "../OnePostPage";
 import PostEditPage from "../PostEditPage";
 import PostsPage from "../PostsPage";
 import RegistrationPage from "../RegistrationPage";
+import { Context } from "./Context";
 
 const App = () => {
   return (

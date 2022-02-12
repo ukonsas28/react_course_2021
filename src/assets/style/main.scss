@@ -38,3 +38,14 @@ a {
 .active {
   color: aqua;
 }
+.post_list_wrapper {
+  scroll-behavior: smooth;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.post_active {
+  a {
+    color: red;
+  }
+}

@@ -14,6 +14,8 @@ const Input: React.FC<InputPropsType> = (props) => {
     setValue(e.target.value);
   };
 
+  console.log("render input ", title);
+
   return (
     <div style={{ fontSize: "24px", display: "flex", flexDirection: "column" }}>
       <span>{title}</span>
@@ -29,4 +31,9 @@ const Input: React.FC<InputPropsType> = (props) => {
   );
 };
 
-export default Input;
+export default React.memo(Input, (prev, next) => {
+  if (prev.value === next.value) {
+    return true;
+  }
+  return false;
+});
